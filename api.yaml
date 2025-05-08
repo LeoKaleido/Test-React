@@ -54,6 +54,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Work'
+    post:
+      summary: Crea una nuova lavorazione
+      description: Crea una nuova lavorazione con i dati forniti.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Work'
+      responses:
+        '201':
+          description: Lavorazione creata con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Work'
   /works/{id}:
     get:
       summary: Recupera una lavorazione specifica
@@ -68,6 +84,29 @@ paths:
       responses:
         '200':
           description: Dettagli della lavorazione
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Work'
+    put:
+      summary: Aggiorna una lavorazione esistente
+      description: Aggiorna i dati di una lavorazione esistente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID della lavorazione da aggiornare.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Work'
+      responses:
+        '200':
+          description: Lavorazione aggiornata con successo
           content:
             application/json:
               schema:
@@ -125,6 +164,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Ticket'
+    post:
+      summary: Crea un nuovo ticket
+      description: Crea un nuovo ticket con i dati forniti.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+      responses:
+        '201':
+          description: Ticket creato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
   /tickets/{id}:
     get:
       summary: Recupera un ticket specifico
@@ -143,6 +198,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Ticket'
+    put:
+      summary: Aggiorna un ticket esistente
+      description: Aggiorna i dati di un ticket esistente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del ticket da aggiornare.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+      responses:
+        '200':
+          description: Ticket aggiornato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
   /operators:
     get:
       summary: Recupera tutti gli operatori
@@ -156,6 +234,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Operator'
+    post:
+      summary: Crea un nuovo operatore
+      description: Crea un nuovo operatore con i dati forniti.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Operator'
+      responses:
+        '201':
+          description: Operatore creato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operator'
   /operators/{id}:
     get:
       summary: Recupera un operatore specifico
@@ -174,6 +268,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Operator'
+    put:
+      summary: Aggiorna un operatore esistente
+      description: Aggiorna i dati di un operatore esistente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID dell'operatore da aggiornare.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Operator'
+      responses:
+        '200':
+          description: Operatore aggiornato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Operator'
   /customers:
     get:
       summary: Recupera tutti i clienti
@@ -187,6 +304,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Customer'
+    post:
+      summary: Crea un nuovo cliente
+      description: Crea un nuovo cliente con i dati forniti.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '201':
+          description: Cliente creato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
   /customers/{id}:
     get:
       summary: Recupera un cliente specifico
@@ -205,6 +338,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Customer'
+    put:
+      summary: Aggiorna un cliente esistente
+      description: Aggiorna i dati di un cliente esistente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del cliente da aggiornare.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '200':
+          description: Cliente aggiornato con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
   /priorities:
     get:
       summary: Recupera tutte le priorità
@@ -218,6 +374,22 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Priority'
+    post:
+      summary: Crea una nuova priorità
+      description: Crea una nuova priorità con i dati forniti.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Priority'
+      responses:
+        '201':
+          description: Priorità creata con successo
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Priority'
   /priorities/{id}:
     get:
       summary: Recupera una priorità specifica
@@ -232,6 +404,29 @@ paths:
       responses:
         '200':
           description: Dettagli della priorità
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Priority'
+    put:
+      summary: Aggiorna una priorità esistente
+      description: Aggiorna i dati di una priorità esistente.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID della priorità da aggiornare.
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Priority'
+      responses:
+        '200':
+          description: Priorità aggiornata con successo
           content:
             application/json:
               schema:
@@ -298,4 +493,4 @@ components:
         id:
           type: integer
         name:
-         
+
