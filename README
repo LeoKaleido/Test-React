@@ -1,9 +1,11 @@
-Implementare una maschera in stile master-detail di un calendario per l'assegnazione delle ore alle lavorazioni dei clienti.
-Master
+## Implementare una maschera in stile master-detail di un calendario per l'assegnazione delle ore alle lavorazioni dei clienti.
+
+# Master
     Deve presentarsi sotto la forma di un calendario che mostri il mese corrente.
     Ogni giorno deve elencare le diverse lavorazioni eseguite con la quantità minima possibile di dettagli per poterle distinguere in modo sommario, es: nome operatore, nome cliente.
     Il calendario deve poter essere filtrabile per mostrare solo le lavorazioni eseguite da un certo operatore o assegnate a un certo cliente. Altri filtri opzionali, ma graditi.
-Detail
+
+# Detail
     Cliccando una lavorazione è possibile vederla in dettaglio.
     Il dettaglio deve comprendere:
         Le informazioni dell'operatore
